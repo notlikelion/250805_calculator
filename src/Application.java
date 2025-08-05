@@ -16,12 +16,18 @@ public class Application {
         System.out.println("계산기가 실행되었습니다"); // 메서드
         // System -> 클래스. out. static 필드(멤버변수). println 메서드
         // -> 터미널(콘솔) => 출력.
+//        Calculator cal = new Calculator();
+        // 이거 안 됨? -> 추상클래스는 상속이나 타입 지정을 위해서 만들어진 거라 new를 통해서 생성 X
+        // => 아직 미구현인 메서드들이 있어서...
+        // 업캐스팅 -> Calculator(부모, 수퍼클래스) => ArrayCalculator(자식, 서브클래스)
+//        Calculator cal = (Calculator) new ArrayCalculator();
         Calculator cal = new ArrayCalculator();
 //        Calculator cal = new ListCalculator();
 //        Calculator cal = new MapCalculator();
         try {
             // 메서드가 실행된다는 보장?
-            cal.calculate(1, 1, "+");
+            int result = cal.calculate(2, 3, "+");
+            System.out.println(result);
         } catch (Exception e) {
             System.err.println(e.getMessage()); // 그냥 에러 메시지
 //            System.err.println(e.getStackTrace()); // 자세하게 모든 과정을 서술한 에러

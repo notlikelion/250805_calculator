@@ -10,4 +10,9 @@ public class MapCalculator extends Calculator {
     public double calculate(double num1, double num2, String operator) throws Exception {
         return 0;
     }
+
+    @Override
+    public void showHistory() {
+
+    }
 }
