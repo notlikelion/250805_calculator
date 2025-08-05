@@ -25,8 +25,8 @@ public class Application {
         // 업캐스팅 -> Calculator(부모, 수퍼클래스) => ArrayCalculator(자식, 서브클래스)
 //        Calculator cal = (Calculator) new ArrayCalculator();
 //        Calculator cal = new ArrayCalculator();
-        Calculator cal = new ArrayCalculator(1);
-//        Calculator cal = new ListCalculator();
+//        Calculator cal = new ArrayCalculator(1);
+        Calculator cal = new ListCalculator();
 //        Calculator cal = new MapCalculator();
         Scanner sc = new Scanner(System.in);
         while (true) {
