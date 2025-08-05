@@ -2,6 +2,7 @@ import calculator.ArrayCalculator;
 import calculator.Calculator;
 import calculator.ListCalculator;
 import calculator.MapCalculator;
+import util.InputHandler;
 
 import java.util.Scanner;
 
@@ -35,10 +36,7 @@ public class Application {
                 break; // 혹은 return;
             }
             try {
-                String[] inputArr = input.split(" ");
-                if (inputArr.length != 3) {
-                    throw new Exception("잘못된 입력");
-                }
+                String[] inputArr = InputHandler.handleInput(input);
                 // 1 + 1 => 1, +, 1 => 0, 1, 2 (배열의 인덱싱)
                 String numStr1 = inputArr[0];
                 String numStr2 = inputArr[2];

@@ -18,6 +18,7 @@ public abstract class Calculator implements ICalculator {
     public double calculate(double num1, double num2, String operator) throws Exception {
         switch (operator) {
             case "+":
+//                return num1 + num2; // break가 별도로 필요 없음.
                 return num1 + num2; // break가 별도로 필요 없음.
             case "-":
                 return num1 - num2;
