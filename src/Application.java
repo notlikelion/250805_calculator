@@ -16,9 +16,9 @@ public class Application {
         System.out.println("계산기가 실행되었습니다"); // 메서드
         // System -> 클래스. out. static 필드(멤버변수). println 메서드
         // -> 터미널(콘솔) => 출력.
-//        Calculator cal = new ArrayCalculator();
-//        Calculator cal = new ListCalculator(); // 이 생성자 로직을 통해 바꿨...
-        Calculator cal = new MapCalculator(); // 이 생성자 로직을 통해 바꿨...
+        Calculator cal = new ArrayCalculator();
+//        Calculator cal = new ListCalculator();
+//        Calculator cal = new MapCalculator();
         try {
             // 메서드가 실행된다는 보장?
             cal.calculate(1, 1, "+");
