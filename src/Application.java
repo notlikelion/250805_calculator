@@ -26,8 +26,8 @@ public class Application {
 //        Calculator cal = (Calculator) new ArrayCalculator();
 //        Calculator cal = new ArrayCalculator();
 //        Calculator cal = new ArrayCalculator(1);
-        Calculator cal = new ListCalculator();
-//        Calculator cal = new MapCalculator();
+//        Calculator cal = new ListCalculator();
+        Calculator cal = new MapCalculator();
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.print("계산할 식을 입력해주세요 ex) 1 + 1 : ");
