@@ -24,6 +24,9 @@ public abstract class Calculator implements ICalculator {
             case "*":
                 return num1 * num2;
             case "/":
+                if (num2 == 0) {
+                    throw new Exception("0으로 나눌 수 없습니다.");
+                }
                 return num1 / num2;
             default:
                 // 지원 안하는 연산자가 들어오면 어째요?
