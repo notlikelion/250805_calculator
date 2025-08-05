@@ -19,12 +19,18 @@ public class MapCalculator extends Calculator {
 
     @Override
     public double calculate(double num1, double num2, String operator) throws Exception {
+        String key = "%f %s %f".formatted(num1, operator, num2);
+        if (historyMap.containsKey(key)) { // 맵 안에 키가 있는지 확인
+            System.out.println("이미 계산한 결과가 있습니다");
+            // get 가져올 수 있음
+            return Double.parseDouble(historyMap.get(key));
+        }
         double result = super.calculate(num1, num2, operator);
         if (!flag) {
 //            String history = "%f %s %f = %f".formatted(num1, operator, num2, result);
             // 길이가 고정적이지 않은 자료구조(데이터타입)에 추가를 할 때
             // add, push, append -> 셋 중에 하나로 추가 (메서드)
-            String key = "%f %s %f".formatted(num1, operator, num2);
+//            String key = "%f %s %f".formatted(num1, operator, num2);
             String value = "%f".formatted(result);
             historyMap.put(key, value);
         }
@@ -34,10 +40,16 @@ public class MapCalculator extends Calculator {
 
     @Override
     public int calculate(int num1, int num2, String operator) throws Exception {
+        String key = "%d %s %d".formatted(num1, operator, num2);
+        if (historyMap.containsKey(key)) { // 맵 안에 키가 있는지 확인
+            System.out.println("이미 계산한 결과가 있습니다");
+            // get 가져올 수 있음
+            return Integer.parseInt(historyMap.get(key));
+        }
         flag = true; // 킵니다
         int result = super.calculate(num1, num2, operator);
         // %d 정수, %f 실수
-        String key = "%d %s %d".formatted(num1, operator, num2);
+//        String key = "%d %s %d".formatted(num1, operator, num2);
         String value = "%d".formatted(result);
         historyMap.put(key, value);
         flag = false; // 끕니다
