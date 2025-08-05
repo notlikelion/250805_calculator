@@ -24,7 +24,8 @@ public class Application {
         // => 아직 미구현인 메서드들이 있어서...
         // 업캐스팅 -> Calculator(부모, 수퍼클래스) => ArrayCalculator(자식, 서브클래스)
 //        Calculator cal = (Calculator) new ArrayCalculator();
-        Calculator cal = new ArrayCalculator();
+//        Calculator cal = new ArrayCalculator();
+        Calculator cal = new ArrayCalculator(1);
 //        Calculator cal = new ListCalculator();
 //        Calculator cal = new MapCalculator();
         Scanner sc = new Scanner(System.in);
@@ -56,6 +57,7 @@ public class Application {
                     int result = cal.calculate(num1, num2, operator);
                     System.out.println(result);
                 }
+                cal.showHistory();
 
                 // 메서드가 실행된다는 보장?
 //            int result = cal.calculate(2, 3, "+");

@@ -11,7 +11,7 @@ public abstract class Calculator implements ICalculator {
         // 캐스팅 (변환하려고 하는 타입) -> 관련 타입이면 바꿔줌
         // int - double 숫자 계열 -> (...)
         // double 소수점 -> int 날아감.
-        return (int) calculate((double) num1, (double) num2, operator);
+        return (int) this.calculate((double) num1, (double) num2, operator);
     }
 
     @Override
