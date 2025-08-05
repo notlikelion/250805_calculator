@@ -6,7 +6,6 @@ package calculator;
 public abstract class Calculator implements ICalculator {
     // abstract class + interface => 구현 책임이 최종 Calculator
 
-
     @Override
     public int calculate(int num1, int num2, String operator) throws Exception {
         // 캐스팅 (변환하려고 하는 타입) -> 관련 타입이면 바꿔줌
